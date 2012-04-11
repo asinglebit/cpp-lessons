@@ -11,20 +11,20 @@ int main()
 	double dX(0.0), dY(0.0), dZ(0.0);
 	double dVectorLength(0.0);
 
-	cout << "\n Ââåäèòå Õ: ";
+	cout << "\n Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¥: ";
 	cin >> dX;
 
-	cout << "\n Ââåäèòå Y: ";
+	cout << "\n Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Y: ";
 	cin >> dY;
 
-	cout << "\n Ââåäèòå Z: ";
+	cout << "\n Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Z: ";
 	cin >> dZ;
 
-	cout << "\n Âû ââåëè ñëåäóþùèå ÷èñëà: X = " << dX << "; Y = " << dY << "; Z = " << dZ;
+	cout << "\n Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ Ñ‡Ð¸ÑÐ»Ð°: X = " << dX << "; Y = " << dY << "; Z = " << dZ;
 
 	dVectorLength = sqrt(dX*dX + dY*dY + dZ*dZ);
 
-	cout << "\n Äëèíà âåêòîðà: " << dVectorLength << ". \n\n\a";
+	cout << "\n Ð”Ð»Ð¸Ð½Ð° Ð²ÐµÐºÑ‚Ð¾Ñ€Ð°: " << dVectorLength << ". \n\n\a";
 
 	return 0;
 }
