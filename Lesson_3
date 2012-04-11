@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main()
+{
+	std::cout<<"Please input number.\n";
+
+	unsigned short sValueInput, sValueTemp;
+
+	std::cout << "sValue = ";
+	std::cin >> sValueInput;
+
+	sValueTemp = sValueInput;
+
+	sValueTemp <<= 1;
+	std::cout<<"sValue * 2 = "<< sValueTemp <<"\n";
+
+	sValueTemp = sValueInput;
+
+	sValueTemp = sValueTemp + (sValueTemp << 1);
+	std::cout<<"sValue * 3 = "<< sValueTemp <<"\n";
+
+	sValueTemp = sValueInput;
+
+	sValueTemp = sValueTemp << 2;
+	std::cout<<"sValue * 4 = "<< sValueTemp <<"\n";
+
+	sValueTemp = sValueInput;
+
+	sValueTemp = sValueTemp + (sValueTemp << 2);
+	std::cout<<"sValue * 5 = "<< sValueTemp <<"\n";
+
+	return 0;
+}
