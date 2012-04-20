@@ -1,0 +1,52 @@
+#include <iostream>
+
+int main()
+{
+	unsigned short usOperation(0);
+	double dsFirstNumber(0.0), dsSecondNumber(0.0);
+	
+	std::cout << "Choose:\n";
+	std::cout << "\n|------------------|";
+	std::cout << "\n|   0   for   +    |";
+	std::cout << "\n|   1   for   -    |";
+	std::cout << "\n|   2   for   *    |";
+	std::cout << "\n|   3   for   /    |";
+	std::cout << "\n|   4   for   %    |";
+	std::cout << "\n|------------------|\n";
+
+	std::cout << "\nYour choice: ";
+	std::cin >> usOperation;
+
+	std::cout << "\nFirst number: ";
+	std::cin >> dsFirstNumber;
+
+	std::cout << "\nSecond number: ";
+	std::cin >> dsSecondNumber;
+
+	if (usOperation == 0)
+	{
+		std::cout << "\n" << dsFirstNumber << " + " << dsSecondNumber << " = " << dsFirstNumber + dsSecondNumber << "\n\n";
+	}
+
+	if (usOperation == 1)
+	{
+		std::cout << "\n" << dsFirstNumber << " - " << dsSecondNumber << " = " << dsFirstNumber - dsSecondNumber << "\n\n";
+	}
+
+	if (usOperation == 2)
+	{
+		std::cout << "\n" << dsFirstNumber << " * " << dsSecondNumber << " = " << dsFirstNumber * dsSecondNumber << "\n\n";
+	}
+
+	if (usOperation == 3)
+	{
+		std::cout << "\n" << dsFirstNumber << " / " << dsSecondNumber << " = " << dsFirstNumber / dsSecondNumber << "\n\n";
+	}
+
+	if (usOperation == 4)
+	{
+		std::cout << "\n" << static_cast<int>(dsFirstNumber) << " % " << static_cast<int>(dsSecondNumber) << " = " << static_cast<int>(dsFirstNumber) % static_cast<int>(dsSecondNumber) << "\n\n";
+	}
+
+	return 0;
+}
