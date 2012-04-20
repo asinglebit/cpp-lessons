@@ -1,0 +1,102 @@
+#include <iostream>
+
+int main()
+{
+	char chOperation;
+	double dsFirstNumber(0.0), dsSecondNumber(0.0);
+	
+STRTPRG: chOperation = '0'; // Перезапустить основной алгоритм
+
+	std::cout <<   "|--------------------------------------|";
+	std::cout << "\n|                            Choose    ";
+	std::cout << "\n|--------------------------------------|";
+	std::cout << "\n|   0   for   +                        ";
+	std::cout << "\n|   1   for   -                        ";
+	std::cout << "\n|   2   for   *                        ";
+	std::cout << "\n|   3   for   /                        ";
+	std::cout << "\n|   4   for   %                        ";
+	std::cout << "\n|--------------------------------------|";
+	std::cout << "\n| Your choice: ";
+
+	std::cin >> chOperation;
+
+	if (!((chOperation >= '0') && (chOperation <= '4'))) // Начать проверку на легальность выбора по ASCII таблице
+	{
+		std::cout << "|\n| Please, make a decent choice!\n";
+		goto STRTPRG;
+	}
+
+	std::cout << "|\n| First number: ";
+	std::cin >> dsFirstNumber;
+	
+	std::cout << "|\n| Second number: ";
+	std::cin >> dsSecondNumber;
+	std::cout << "|--------------------------------------|";
+	std::cout << "\n| ";
+
+	switch (chOperation) // Начать проверку на тип операции
+	{
+		case '0':
+		{
+			std::cout << dsFirstNumber << " + " << dsSecondNumber << " = " << dsFirstNumber + dsSecondNumber;
+			break;
+		}
+
+		case '1':
+		{
+			std::cout << dsFirstNumber << " - " << dsSecondNumber << " = " << dsFirstNumber - dsSecondNumber;
+			break;
+		}
+
+		case '2':
+		{
+			std::cout << dsFirstNumber << " * " << dsSecondNumber << " = " << dsFirstNumber * dsSecondNumber;
+			break;
+		}
+
+		case '3':
+		{
+			std::cout << dsFirstNumber << " / " << dsSecondNumber << " = " << dsFirstNumber / dsSecondNumber;
+			break;
+		}	
+
+		case '4':
+		{
+			std::cout << "Only integers are allowed!"; // Допустимы только целые числа!
+			std::cout << "\n| Forced casting will be applied."; // Проводим форсированный внешний кастинг
+			std::cout << "\n| ";
+			std::cout << "\n| ";
+			std::cout << static_cast<int>(dsFirstNumber) << " % " << static_cast<int>(dsSecondNumber) << " = " << static_cast<int>(dsFirstNumber) % static_cast<int>(dsSecondNumber);
+			break;
+		}
+	}
+
+YESORNO: chOperation = '0'; // Перезапустить интерфейс для выхода из программы
+
+	std::cout << "\n|--------------------------------------|";
+	std::cout << "\n|                            Again?    ";
+	std::cout << "\n|--------------------------------------|";
+	std::cout << "\n|   0   for   No                       ";
+	std::cout << "\n|   1   for   Yes                      ";
+	std::cout << "\n|--------------------------------------|";
+
+	std::cout << "\n| Your choice: ";
+	std::cin >> chOperation;
+
+	switch (chOperation) // Начать проверку на тип операции
+	{
+		case '1':
+			goto STRTPRG; // Перезапустить основной алгоритм
+
+		case '0':
+			break;
+
+		default:
+			std::cout << "|\n| Please, say Yes or No!";			
+			goto YESORNO; // Перезапустить интерфейс для выхода из программы
+	}
+
+	std::cout << "|--------------------------------------|\n\n";
+
+	return 0;
+}
