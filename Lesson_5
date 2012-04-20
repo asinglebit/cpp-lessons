@@ -5,7 +5,7 @@ int main()
 	char chOperation;
 	double dsFirstNumber(0.0), dsSecondNumber(0.0);
 	
-STRTPRG: chOperation = '0'; // Перезапустить основной алгоритм
+STRTPRG: chOperation = '0'; // // РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚СЊ РѕСЃРЅРѕРІРЅРѕР№ Р°Р»РіРѕСЂРёС‚Рј
 
 	std::cout <<   "|--------------------------------------|";
 	std::cout << "\n|                            Choose    ";
@@ -20,7 +20,7 @@ STRTPRG: chOperation = '0'; // Перезапустить основной алгоритм
 
 	std::cin >> chOperation;
 
-	if (!((chOperation >= '0') && (chOperation <= '4'))) // Начать проверку на легальность выбора по ASCII таблице
+	if (!((chOperation >= '0') && (chOperation <= '4'))) // РќР°С‡Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ РЅР° Р»РµРіР°Р»СЊРЅРѕСЃС‚СЊ РІС‹Р±РѕСЂР° РїРѕ ASCII С‚Р°Р±Р»РёС†Рµ
 	{
 		std::cout << "|\n| Please, make a decent choice!\n";
 		goto STRTPRG;
@@ -34,7 +34,7 @@ STRTPRG: chOperation = '0'; // Перезапустить основной алгоритм
 	std::cout << "|--------------------------------------|";
 	std::cout << "\n| ";
 
-	switch (chOperation) // Начать проверку на тип операции
+	switch (chOperation) // РќР°С‡Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ РЅР° С‚РёРї РѕРїРµСЂР°С†РёРё
 	{
 		case '0':
 		{
@@ -62,8 +62,8 @@ STRTPRG: chOperation = '0'; // Перезапустить основной алгоритм
 
 		case '4':
 		{
-			std::cout << "Only integers are allowed!"; // Допустимы только целые числа!
-			std::cout << "\n| Forced casting will be applied."; // Проводим форсированный внешний кастинг
+			std::cout << "Only integers are allowed!"; // Р”РѕРїСѓСЃС‚РёРјС‹ С‚РѕР»СЊРєРѕ С†РµР»С‹Рµ С‡РёСЃР»Р°!
+			std::cout << "\n| Forced casting will be applied."; // РџСЂРѕРІРѕРґРёРј С„РѕСЂСЃРёСЂРѕРІР°РЅРЅС‹Р№ РІРЅРµС€РЅРёР№ РєР°СЃС‚РёРЅРі
 			std::cout << "\n| ";
 			std::cout << "\n| ";
 			std::cout << static_cast<int>(dsFirstNumber) << " % " << static_cast<int>(dsSecondNumber) << " = " << static_cast<int>(dsFirstNumber) % static_cast<int>(dsSecondNumber);
@@ -71,7 +71,7 @@ STRTPRG: chOperation = '0'; // Перезапустить основной алгоритм
 		}
 	}
 
-YESORNO: chOperation = '0'; // Перезапустить интерфейс для выхода из программы
+YESORNO: chOperation = '0'; // РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚СЊ РёРЅС‚РµСЂС„РµР№СЃ РґР»СЏ РІС‹С…РѕРґР° РёР· РїСЂРѕРіСЂР°РјРјС‹
 
 	std::cout << "\n|--------------------------------------|";
 	std::cout << "\n|                            Again?    ";
@@ -83,17 +83,17 @@ YESORNO: chOperation = '0'; // Перезапустить интерфейс для выхода из программы
 	std::cout << "\n| Your choice: ";
 	std::cin >> chOperation;
 
-	switch (chOperation) // Начать проверку на тип операции
+	switch (chOperation) // РќР°С‡Р°С‚СЊ РїСЂРѕРІРµСЂРєСѓ РЅР° С‚РёРї РѕРїРµСЂР°С†РёРё
 	{
 		case '1':
-			goto STRTPRG; // Перезапустить основной алгоритм
+			goto STRTPRG; // РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚СЊ РѕСЃРЅРѕРІРЅРѕР№ Р°Р»РіРѕСЂРёС‚Рј
 
 		case '0':
 			break;
 
 		default:
 			std::cout << "|\n| Please, say Yes or No!";			
-			goto YESORNO; // Перезапустить интерфейс для выхода из программы
+			goto YESORNO; // РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚СЊ РёРЅС‚РµСЂС„РµР№СЃ РґР»СЏ РІС‹С…РѕРґР° РёР· РїСЂРѕРіСЂР°РјРјС‹
 	}
 
 	std::cout << "|--------------------------------------|\n\n";
